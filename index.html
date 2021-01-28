@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,118 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Food For You</title>
 </head>
+
 <body>
-    
 
+    <!-- to get the icon on the left i had to place the <img> tags inside the first <p> element -->
+    <!-- there might be a better way -->
+    <!-- navbar start -->
+    <nav id="nav" class="hero is-info">
+        <div class="hero-body">
+            <p class="title">Food For You
+                <img class="navbar-icon" src="./assets/images/navbar-icon.png"
+                    alt="little symbol of a plate with forks">
+            </p>
+            <p class="subtitle">When you just can't choose</p>
+        </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
 
+    <!-- drop down options start -->
+    <main>
+        <section>
+            <!-- search terms of food type/price/delivery/movie genre  point for fetch -->
+            <!-- from screen size 885 to about 760 the options go off the screen. i tried bulma's "is-mobile" -->
+            <!-- but that causes the drop down options to never stack on top of each other -->
+            <!-- also i could not get the options to align at the bottom of the drop down bars -->
+            <!-- so it aligns at the top of the text for now -->
 
+            <!-- what category for food // use this selection for the search term -->
+            <div id="dropDownOptions" class="columns is-centered">
+                <div class="column">
+                    <section class="section">
+                        <h2 class="title is-size-4">What Kind Of Food</h2>
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option> <!-- need to disable this option -->
+                                <option>Random Category</option>
+                                <option>Chinese</option>
+                                <option>Pizza</option>
+                                <option>Greek</option>
+                                <!-- etc // we need a few more options // a working random option? -->
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- what price point // use this for the search price -->
+                <div class="column">
+                    <section class="section">
+                        <h2 class="title is-size-4">How Much Money</h2>
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option> <!-- need to disable this option -->
+                                <option>$</option>
+                                <option>$$</option>
+                                <option>$$$</option>
+                                <option>$$$$</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- delivery? yes = true // no = false -->
+                <!-- this is the option that the dropdown box doesn't look aligned to the others -->
+                <div class="column">
+                    <section class="section">
+                        <h2 class="title is-size-4">Do You Want Delivery?</h2>
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option> <!-- need to disable this option -->
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- what genre of movie // use this for the search price -->
+                <div class="column">
+                    <section class="section">
+                        <h2 class="title is-size-4">What Movie Genre</h2>
+                        <div class="select">
+                            <select>
+                                <option>Select dropdown</option> <!-- need to disable this option -->
+                                <option>Action</option>
+                                <option>Comedy</option>
+                                <option>Drama</option>
+                                <option>Music</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+
+        <button id="submitBtn" class="button is-large is-fullwidth is-rounded is-focused">Submit</button>
+    </main>
+    <!-- drop down options end -->
+
+    <!-- footer (what's near you) start -->
+    <footer class="section">
+        <h3 class="title">What's near you?</h3>
+        <div class="columns is-centered is-mobile">
+            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+        </div>
+    </footer>
+    <!-- footer (what's near you) end -->
+
+<!-- script tag for javascript -->
     <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
