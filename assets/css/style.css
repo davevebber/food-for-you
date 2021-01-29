@@ -1,0 +1,33 @@
+* {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+  
+    margin: 20px;
+    border: 2px solid black;
+}
+
+body h2 h3 {
+    font-size: 1rem;
+}
+
+#nav {
+  border-bottom: 5px solid black;
+}
+
+.navbar-icon {
+    height: 100px;
+    width: 100px;
+    float: right;
+}
+
+#submitBtn {
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer h3 {
+    text-align: center;
+}
