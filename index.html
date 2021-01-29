@@ -41,12 +41,12 @@
                     <section class="section">
                         <h2 class="title is-size-4">What Kind Of Food</h2>
                         <div class="select">
-                            <select>
-                                <option>Select dropdown</option> <!-- need to disable this option -->
+                            <select id="food-category">
+                                <option selected disabled>Select dropdown</option> 
                                 <option>Random Category</option>
-                                <option>Chinese</option>
-                                <option>Pizza</option>
-                                <option>Greek</option>
+                                <option value="chinese">Chinese</option>
+                                <option value="pizza">Pizza</option>
+                                <option value="greek">Greek</option>
                                 <!-- etc // we need a few more options // a working random option? -->
                             </select>
                         </div>
@@ -58,12 +58,12 @@
                     <section class="section">
                         <h2 class="title is-size-4">How Much Money</h2>
                         <div class="select">
-                            <select>
-                                <option>Select dropdown</option> <!-- need to disable this option -->
-                                <option>$</option>
-                                <option>$$</option>
-                                <option>$$$</option>
-                                <option>$$$$</option>
+                            <select id="yelp-price">
+                                <option selected disabled>Select dropdown</option> 
+                                <option value="1">$</option>
+                                <option value="2">$$</option>
+                                <option value="3">$$$</option>
+                                <option value="4">$$$$</option>
                             </select>
                         </div>
                     </section>
@@ -75,10 +75,10 @@
                     <section class="section">
                         <h2 class="title is-size-4">Do You Want Delivery?</h2>
                         <div class="select">
-                            <select>
-                                <option>Select dropdown</option> <!-- need to disable this option -->
-                                <option>Yes</option>
-                                <option>No</option>
+                            <select id="delivery">
+                                <option selected disabled>Select dropdown</option> 
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                             </select>
                         </div>
                     </section>

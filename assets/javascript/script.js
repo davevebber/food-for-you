@@ -24,4 +24,27 @@ fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=068bcb78c00e7bd3949
         console.log(response)
     });
 
-    
+
+const submitBtn = document.querySelector('#submitBtn');
+let yelpCategory = document.querySelector('#food-category');
+let yelpPrice = document.querySelector('#yelp-price');
+let yelpDelivery = document.querySelector('#delivery');
+
+
+
+function getFoodCategory() {
+    localStorage.setItem('food-category', yelpCategory.value);    
+}
+
+function getYelpPrice() {
+    localStorage.setItem('yelp-price', yelpPrice.value);
+}
+
+function getDelivery() {
+    localStorage.setItem('delivery', yelpDelivery.value);
+}
+
+
+submitBtn.addEventListener('click', getFoodCategory);
+submitBtn.addEventListener('click', getYelpPrice);
+submitBtn.addEventListener('click', getDelivery);
