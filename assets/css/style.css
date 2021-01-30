@@ -3,12 +3,6 @@
     margin: 0;
 }
 
-body {
-  
-    margin: 20px;
-    border: 2px solid black;
-}
-
 body h2 h3 {
     font-size: 1rem;
 }
@@ -28,6 +22,29 @@ body h2 h3 {
     margin: 0 auto;
 }
 
+#restaurant-results h3 {
+    text-align: center;
+}
+
+#restaurant-results h4 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#restaurant-website {
+    padding: 30px;
+    margin: 15px;
+}
+
+#restaurant-results img {
+    margin: 0 auto;
+}
+
 footer h3 {
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
