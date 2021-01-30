@@ -49,12 +49,14 @@ function getYelpFetch() {
         let restaurantName = document.querySelector('#restaurant-name')
         let restaurantWebsite = document.querySelector('#restaurant-website')
         let restaurantImage = document.querySelector('#restaurant-image')
+        let restaurantRating = document.querySelector('#yelp-rating')
         let randomNumber = Math.floor(Math.random() * (19-0 +1)) + 0;
         console.log(randomNumber);
 
-        restaurantName.innerHTML = data.businesses[randomNumber].alias;
+        restaurantName.innerHTML = "Restaurant: " + data.businesses[randomNumber].alias;
         restaurantWebsite.href = data.businesses[randomNumber].url;
         restaurantImage.src = data.businesses[randomNumber].image_url;
+        restaurantRating.innerHTML = "Rating: " + data.businesses[randomNumber].rating
   })
 restaurantResults.classList.remove('hide');
 };

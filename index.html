@@ -42,11 +42,18 @@
                         <h2 class="title is-size-4">What Kind Of Food</h2>
                         <div class="select">
                             <select id="food-category">
-                                <option selected disabled>Select dropdown</option> 
-                                <option>Random Category</option>
+                                <option selected disabled>Select dropdown</option>
                                 <option value="chinese">Chinese</option>
                                 <option value="pizza">Pizza</option>
                                 <option value="greek">Greek</option>
+                                <option value="ramen">Ramen</option>
+                                <option value="Korean">Korean</option>
+                                <option value="caribbean">Caribbean</option>
+                                <option value="mexican">Mexican</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="foodtruck">Food Truck</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="mediterranean">Mediterranean</option>
                                 <!-- etc // we need a few more options // a working random option? -->
                             </select>
                         </div>
@@ -59,7 +66,7 @@
                         <h2 class="title is-size-4">How Much Money</h2>
                         <div class="select">
                             <select id="yelp-price">
-                                <option selected disabled>Select dropdown</option> 
+                                <option selected disabled>Select dropdown</option>
                                 <option value="1">$</option>
                                 <option value="2">$$</option>
                                 <option value="3">$$$</option>
@@ -76,7 +83,7 @@
                         <h2 class="title is-size-4">Do You Want Delivery?</h2>
                         <div class="select">
                             <select id="delivery">
-                                <option selected disabled>Select dropdown</option> 
+                                <option selected disabled>Select dropdown</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
@@ -109,11 +116,16 @@
 
     <!-- restaurant results start -->
     <section id="restaurant-results" class="section hide is-centered">
-        <h3 class="title">Restaurant Results:</h3>
-        <div class="is-centered is-mobile">
+        <div>
             <h4 id="restaurant-name" class="strong"></h4>
-            <button class="button is-rounded is-focused"><a id="restaurant-website" href="">Check them out on Yelp!</a></button>
-            <img id="restaurant-image" class="column is-narrow" src="" alt="" height="225px" width="225px">
+            <h4 id="yelp-rating"></h4>
+            <div class="has-text-centered">
+                <button id="restaurant-website" class="button is-rounded is-focused is-centered">
+                    <a id="yelp-link" href="">Check them out on Yelp!</a>
+                </button>
+            </div>
+            <img id="restaurant-image" class="column is-narrow" src="" alt="picture from yelp about the restaurant"
+                height="225px" width="225px">
         </div>
     </section>
     <!-- restaurant results end -->
@@ -130,7 +142,8 @@
     </footer>
     <!-- footer (what's near you) end -->
 
-<!-- script tag for javascript -->
+    <!-- script tag for javascript -->
     <script src="./assets/javascript/script.js"></script>
 </body>
+
 </html>

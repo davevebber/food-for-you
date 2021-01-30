@@ -32,6 +32,15 @@ body h2 h3 {
     text-align: center;
 }
 
+#restaurant-website {
+    padding: 30px;
+    margin: 15px;
+}
+
+#restaurant-results img {
+    margin: 0 auto;
+}
+
 footer h3 {
     text-align: center;
 }
