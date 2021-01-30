@@ -27,7 +27,7 @@
     <!-- navbar end -->
 
     <!-- drop down options start -->
-    <main>
+    <main class="main-section">
         <section>
             <!-- search terms of food type/price/delivery/movie genre  point for fetch -->
             <!-- from screen size 885 to about 760 the options go off the screen. i tried bulma's "is-mobile" -->
@@ -54,6 +54,7 @@
                                 <option value="foodtruck">Food Truck</option>
                                 <option value="vegan">Vegan</option>
                                 <option value="mediterranean">Mediterranean</option>
+                                <option value="dominican">Dominican</option>
                                 <!-- etc // we need a few more options // a working random option? -->
                             </select>
                         </div>
@@ -118,14 +119,14 @@
     <section id="restaurant-results" class="section hide is-centered">
         <div>
             <h4 id="restaurant-name" class="strong"></h4>
-            <h4 id="yelp-rating"></h4>
+            <h4 id="yelp-rating" class="is-size-5"></h4>
             <div class="has-text-centered">
                 <button id="restaurant-website" class="button is-rounded is-focused is-centered">
                     <a id="yelp-link" href="">Check them out on Yelp!</a>
                 </button>
             </div>
             <img id="restaurant-image" class="column is-narrow" src="" alt="picture from yelp about the restaurant"
-                height="225px" width="225px">
+                height="300px" width="350px">
         </div>
     </section>
     <!-- restaurant results end -->
