@@ -97,10 +97,10 @@ let getMovie = function () {
                     let movieWebURL = "https://www.themoviedb.org/movie/" + response.results[randomMovie].id + "-" + movieTitle
                     console.log(moviePosterURL);
 
-                    movieName.innerHTML = "Movie: " + movieTitle;
+                    movieName.innerHTML = movieTitle;
                     movieWebsite.href = movieWebURL;
                     moviePoster.src = moviePosterURL;
-                    movieRating.innerHTML = "Rating: " + response.results[randomMovie].vote_average;
+                    movieRating.innerHTML = "Average Rating: " + response.results[randomMovie].vote_average + "/10";
                 });
         });
 
