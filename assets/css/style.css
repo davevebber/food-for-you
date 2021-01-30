@@ -41,6 +41,26 @@ body h2 h3 {
     margin: 0 auto;
 }
 
+/* ~~Movie HTML Formatting~~ */
+#movie-result h3 {
+    text-align: center;
+}
+
+#movie-result h4 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#movie-website {
+    padding: 30px;
+    margin: 15px;
+}
+
+#movie-result img {
+    margin: 0 auto;
+}
+
 footer h3 {
     text-align: center;
 }
@@ -48,3 +68,4 @@ footer h3 {
 .hide {
     display: none;
 }
+
