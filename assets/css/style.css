@@ -31,3 +31,17 @@ body h2 h3 {
 footer h3 {
     text-align: center;
 }
+.top-header {
+    height: 80px;
+    width: 100px;
+}
+.row::after {
+    float: left;
+    width: 100%;
+    padding: 0px;
+  }
+  .row {
+      display: flex;
+  }
+  
+  
