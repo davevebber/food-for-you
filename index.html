@@ -94,7 +94,7 @@
                 <!-- ~ Movie Drop Down ~-->>
                 <div class="column">
                     <section class="section">
-                        <h2 class="title is-size-4">What Kind of Movie?</h2>
+                        <h2 class="title is-size-4">We watching anything tonight?</h2>
                         <div class="select">
                             <select class="movie-genre-dropdown">
                                 <option disabled selected>Select Genre</option> 
@@ -130,12 +130,12 @@
 
     <!-- ~ Query Results Start ~ -->
     <!-- ~ Putting restaurant results in section with results ~ -->
-    <section class="section hide" id="overall-results">
+    <section id="overall-results">
 
         <!-- ~ Pulled class and put into overall section, removed is-centered ~-->
         <!-- restaurant results start -->
         <div class="column">
-            <section id="restaurant-results" >
+            <section id="restaurant-results" class="section hide" >
                 <div>
                     <h4 id="restaurant-name" class="strong"></h4>
                     <h4 id="yelp-rating"></h4>
@@ -153,7 +153,7 @@
 
         <!-- ~ Movie Results Start ~ -->
         <div class="column">
-            <section id="movie-result" >
+            <section id="movie-results" class="section hide">
                 <div>
                     <h4 id="movie-name" class="strong"></h4>
                     <h4 id="movie-rating">Average User Rating: </h4>

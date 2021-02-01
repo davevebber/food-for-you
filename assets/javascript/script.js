@@ -3,9 +3,12 @@ let yelpCategory = document.querySelector('#food-category');
 let yelpPrice = document.querySelector('#yelp-price');
 let yelpDelivery = document.querySelector('#delivery');
 let movieGenre = document.querySelector('.movie-genre-dropdown');
+console.log(movieGenre.value)
 
 // restaurant results section 
-const overallResults = document.querySelector('#overall-results'); // ~Replaced restaurant with overall~
+const restaurantResults = document.querySelector('#restaurant-results'); // ~Replaced restaurant with overall~
+
+const movieResults = document.querySelector('#movie-results');
 
 // saves the food category for yelp fetch request
 function getFoodCategory() {
@@ -59,7 +62,11 @@ function getYelpFetch() {
             restaurantImage.src = data.businesses[randomNumber].image_url;
             restaurantRating.innerHTML = "Rating: " + data.businesses[randomNumber].rating
         })
-    overallResults.classList.remove('hide'); // ~Changed function to match overall~
+    restaurantResults.classList.remove('hide'); // ~Changed function to match overall~
+    let movieValue = movieGenre.value;
+    if (movieValue !== "Select Genre") {
+        movieResults.classList.remove("hide");
+    }
 };
 
 // fetch for The Movie Database -- need to get genre term to update according to dropdown options
@@ -84,7 +91,7 @@ let getMovie = function () {
                 })
                 .then(function (response) {
                     console.log(response)
-                    let randomMovie = Math.floor(Math.random() * (response.results.length - 1) + 1);
+                    let randomMovie = Math.floor(Math.random() * (response.results.length - 1) + 1); 
                     let movieTitle = response.results[randomMovie].title;
                     console.log(randomMovie);
                     console.log(movieTitle);
