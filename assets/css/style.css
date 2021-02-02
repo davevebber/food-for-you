@@ -17,9 +17,23 @@ body h2 h3 {
     float: right;
 }
 
+.main-section {
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    padding-bottom: 50px;
+    width: 75%
+}
+
 #submitBtn {
     width: 50%;
     margin: 0 auto;
+}
+
+#restaurant-results {
+    margin: 0 auto;
+    border-bottom: 2px solid black;
+    padding-bottom: 50px;
+    width: 75%
 }
 
 #restaurant-results h3 {
