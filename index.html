@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="/Users/calebportales/mybulma/mystyles.scss">
+    <!-- we need to have this relative linked and  -->
+    <!-- <link rel="stylesheet" href="/Users/calebportales/mybulma/mystyles.scss"> -->
     <title>Food For You</title>
 </head>
 
@@ -16,35 +17,14 @@
     <!-- there might be a better way -->
     <!-- navbar start -->
     <nav id="nav" class="hero is-info">
-        <div class="row">
-            <div class="row">
+        <!-- <div class="row">
+            <div id="hero-background" class="row">
                 <img class="top-header" src="./assets/images/checker.jpg">
             </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-            <div class="row">
-                <img class="top-header" src="./assets/images/checker.jpg">
-            </div>
-          </div>
-    </div>
+        </div>
+        </div> -->
         <div class="hero-body">
-            
+
             <p class="title">Food For You
                 <img class="navbar-icon" src="./assets/images/navbar-icon.png"
                     alt="little symbol of a plate with forks">
@@ -57,6 +37,16 @@
 
     <!-- drop down options start -->
     <main class="main-section">
+
+        <!-- modal -->
+        <div id="error-modal" class="modal">
+            <div id="modal-background" class="modal-background">
+                <div class="modal-content has-background-white py-5 px-5">
+                    <p class="title mb-6">Sorry there were no results for this food choice.</p>
+                </div>
+            </div>
+        </div>
+
         <section>
             <!-- search terms of food type/price/delivery/movie genre  point for fetch -->
             <!-- from screen size 885 to about 760 the options go off the screen. i tried bulma's "is-mobile" -->
@@ -127,7 +117,7 @@
                         <h2 class="title is-size-4">We watching anything tonight?</h2>
                         <div class="select">
                             <select class="movie-genre-dropdown">
-                                <option disabled selected>Select Genre</option> 
+                                <option disabled selected>Select Genre</option>
                                 <option value="28">Action</option>
                                 <option value="12">Adventure</option>
                                 <option value="16">Animation</option>
@@ -165,7 +155,7 @@
         <!-- ~ Pulled class and put into overall section, removed is-centered ~-->
         <!-- restaurant results start -->
         <div class="column">
-            <section id="restaurant-results" class="section hide" >
+            <section id="restaurant-results" class="section hide">
                 <div>
                     <h4 id="restaurant-name" class="strong"></h4>
                     <h4 id="yelp-rating"></h4>
@@ -197,37 +187,37 @@
                 </div>
 
             </section>
-    <!-- restaurant results start -->
-    <section id="restaurant-results" class="section hide is-centered">
-        <div>
-            <h4 id="restaurant-name" class="strong"></h4>
-            <h4 id="yelp-rating" class="is-size-5"></h4>
-            <div class="has-text-centered">
-                <button id="restaurant-website" class="button is-rounded is-focused is-centered">
-                    <a id="yelp-link" href="">Check them out on Yelp!</a>
-                </button>
-            </div>
-            <img id="restaurant-image" class="column is-narrow" src="" alt="picture from yelp about the restaurant"
-                height="300px" width="350px">
-        </div>
-    </section>
-    <!-- ~ Movie Results End ~ -->
-    <!-- ~ Query Results End~ -->
+            <!-- restaurant results start -->
+            <section id="restaurant-results" class="section hide is-centered">
+                <div>
+                    <h4 id="restaurant-name" class="strong"></h4>
+                    <h4 id="yelp-rating" class="is-size-5"></h4>
+                    <div class="has-text-centered">
+                        <button id="restaurant-website" class="button is-rounded is-focused is-centered">
+                            <a id="yelp-link" href="">Check them out on Yelp!</a>
+                        </button>
+                    </div>
+                    <img id="restaurant-image" class="column is-narrow" src=""
+                        alt="picture from yelp about the restaurant" height="300px" width="350px">
+                </div>
+            </section>
+            <!-- ~ Movie Results End ~ -->
+            <!-- ~ Query Results End~ -->
 
-    <!-- footer (what's near you) start -->
-    <footer class="section">
-        <h3 class="title">What's near you?</h3>
-        <div class="columns is-centered is-mobile">
-            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-            <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-        </div>
-    </footer>
-    <!-- footer (what's near you) end -->
+            <!-- footer (what's near you) start -->
+            <footer class="section">
+                <h3 class="title">What's near you?</h3>
+                <div class="columns is-centered is-mobile">
+                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
+                </div>
+            </footer>
+            <!-- footer (what's near you) end -->
 
-    <!-- script tag for javascript -->
-    <script src="./assets/javascript/script.js"></script>
+            <!-- script tag for javascript -->
+            <script src="./assets/javascript/script.js"></script>
 </body>
 
 </html>

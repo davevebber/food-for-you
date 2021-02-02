@@ -5,6 +5,10 @@ let yelpDelivery = document.querySelector('#delivery');
 let movieGenre = document.querySelector('.movie-genre-dropdown');
 console.log(movieGenre.value)
 
+//modal
+modalPopup = document.querySelector('#error-modal')
+modalBackground = document.querySelector('#modal-background')
+
 // restaurant results section 
 const restaurantResults = document.querySelector('#restaurant-results'); // ~Replaced restaurant with overall~
 
@@ -54,15 +58,21 @@ function getYelpFetch() {
             let restaurantWebsite = document.querySelector('#restaurant-website')
             let restaurantImage = document.querySelector('#restaurant-image')
             let restaurantRating = document.querySelector('#yelp-rating')
-            let randomNumber = Math.floor(Math.random() * (19 - 0 + 1)) + 0;
+            let randomNumber = Math.floor(Math.random() * (data.businesses.length));
             console.log(randomNumber);
+
+            if (data.total == 0) {
+                modalPopup.classList.add('is-active')
+            } else{
 
             restaurantName.innerHTML = "Restaurant: " + data.businesses[randomNumber].alias;
             restaurantWebsite.href = data.businesses[randomNumber].url;
             restaurantImage.src = data.businesses[randomNumber].image_url;
             restaurantRating.innerHTML = "Rating: " + data.businesses[randomNumber].rating
-        })
-    restaurantResults.classList.remove('hide'); // ~Changed function to match overall~
+            restaurantResults.classList.remove('hide'); // ~Changed function to match overall~
+
+        }
+    })
     let movieValue = movieGenre.value;
     if (movieValue !== "Select Genre") {
         movieResults.classList.remove("hide");
@@ -91,7 +101,7 @@ let getMovie = function () {
                 })
                 .then(function (response) {
                     console.log(response)
-                    let randomMovie = Math.floor(Math.random() * (response.results.length - 1) + 1); 
+                    let randomMovie = Math.floor(Math.random() * (response.results.length - 1) + 1);
                     let movieTitle = response.results[randomMovie].title;
                     console.log(randomMovie);
                     console.log(movieTitle);
@@ -121,3 +131,8 @@ submitBtn.addEventListener('click', getYelpFetch);
 
 // ~Event listener for movie dropdown~
 movieGenre.addEventListener('change', getMovie)
+
+// event listener for modal
+modalBackground.addEventListener('click', () => {
+    modalPopup.classList.remove('is-active');
+})
