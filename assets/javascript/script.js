@@ -51,7 +51,7 @@ function getYelpFetch() {
             let randomNumber = Math.floor(Math.random() * (data.businesses.length));
             console.log(randomNumber);
 
-            if (data.total = 0) {
+            if (data.total === 0) {
                 modalPopup.classList.add('is-active')
             } else{
 
