@@ -4,10 +4,8 @@ let yelpPrice = document.querySelector('#yelp-price');
 let yelpDelivery = document.querySelector('#delivery');
 let movieGenre = document.querySelector('.movie-genre-dropdown');
 console.log(movieGenre.value);
-let foodSearchArr = [];
-let yelpPriceArr = [];
 
-//modal
+// modal
 modalPopup = document.querySelector('#error-modal')
 modalBackground = document.querySelector('#modal-background')
 
@@ -18,30 +16,14 @@ const movieResults = document.querySelector('#movie-results');
 
 // saves the food category for yelp fetch request
 function getFoodCategory() {
-    foodSearchArr.push(yelpCategory);
-    localStorage.setItem('food-category', yelpCategory.value);
-}
-
-// a.push(JSON.parse(localStorage.getItem('session')));
-// localStorage.setItem('session', JSON.stringify(a));
-
-// saves the price point for the yelp fetch request
-function getYelpPrice() {
-    localStorage.setItem('yelp-price', yelpPrice.value);
-}
-
-// saves the delivery option for yelp fetch request
-function getDelivery() {
-    localStorage.setItem('delivery', yelpDelivery.value);
+    localStorage.setItem('food-category', yelpCategory);
 }
 
 // fetch for YELP
-
 function getYelpFetch() {
     let foodSearch = localStorage.getItem('food-category');
     
     let yelpPrice = localStorage.getItem('yelp-price');
-    yelpPrice
 
     fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=losangeles&term=" + foodSearch + "&price=" + yelpPrice, {
         "method": "GET",
@@ -128,8 +110,6 @@ let getMovie = function () {
 
 // event listeners for submitBtn
 submitBtn.addEventListener('click', getFoodCategory);
-submitBtn.addEventListener('click', getYelpPrice);
-submitBtn.addEventListener('click', getDelivery);
 submitBtn.addEventListener('click', getYelpFetch);
 
 // ~Event listener for movie dropdown~
