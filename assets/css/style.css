@@ -19,7 +19,6 @@
     background-image: linear-gradient(135deg, orange 47%, cyan);
     
 
-<<<<<<< HEAD
 }
 p.subtitle {
     font-family: Comic Sans MS, Comic Sans, cursive;
@@ -43,8 +42,6 @@ body {
 	}
 }
 
-=======
->>>>>>> develop
 body h2 h3 {
     font-size: 1rem;
 }
@@ -124,7 +121,6 @@ body h2 h3 {
 footer h3 {
     text-align: center;
 }
-<<<<<<< HEAD
 .top-header {
     height: 80px;
     width: 1270px;
@@ -151,10 +147,3 @@ footer h3 {
       box-shadow: 0 0 7px ivory;
   }
  
-=======
-
-.hide {
-    display: none;
-}
-
->>>>>>> develop

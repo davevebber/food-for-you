@@ -16,7 +16,12 @@ const movieResults = document.querySelector('#movie-results');
 
 // saves the food category for yelp fetch request
 function getFoodCategory() {
-    localStorage.setItem('food-category', yelpCategory);
+    localStorage.setItem('food-category', yelpCategory.value);
+}
+
+// saves the price point category for yelp fetch
+function getYelpPrice() {
+    localStorage.setItem('yelp-price', yelpPrice.value)
 }
 
 // fetch for YELP
@@ -46,7 +51,7 @@ function getYelpFetch() {
             let randomNumber = Math.floor(Math.random() * (data.businesses.length));
             console.log(randomNumber);
 
-            if (data.total == 0) {
+            if (data.total = 0) {
                 modalPopup.classList.add('is-active')
             } else{
 
@@ -111,6 +116,7 @@ let getMovie = function () {
 // event listeners for submitBtn
 submitBtn.addEventListener('click', getFoodCategory);
 submitBtn.addEventListener('click', getYelpFetch);
+submitBtn.addEventListener('click', getYelpPrice);
 
 // ~Event listener for movie dropdown~
 movieGenre.addEventListener('change', getMovie)
