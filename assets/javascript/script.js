@@ -36,6 +36,8 @@ function getYelpFetch() {
             return response.json();
         })
         .then(function (data) {
+            localStorage.setItem("data", JSON.stringify(data));
+            console.log(localStorage.getItem("data"));
             console.log(data);
 
             // show list of businesses from array of chosen options
