@@ -3,7 +3,9 @@ let yelpCategory = document.querySelector('#food-category');
 let yelpPrice = document.querySelector('#yelp-price');
 let yelpDelivery = document.querySelector('#delivery');
 let movieGenre = document.querySelector('.movie-genre-dropdown');
-console.log(movieGenre.value)
+console.log(movieGenre.value);
+let foodSearchArr = [];
+let yelpPriceArr = [];
 
 //modal
 modalPopup = document.querySelector('#error-modal')
@@ -16,8 +18,12 @@ const movieResults = document.querySelector('#movie-results');
 
 // saves the food category for yelp fetch request
 function getFoodCategory() {
+    foodSearchArr.push(yelpCategory);
     localStorage.setItem('food-category', yelpCategory.value);
 }
+
+// a.push(JSON.parse(localStorage.getItem('session')));
+// localStorage.setItem('session', JSON.stringify(a));
 
 // saves the price point for the yelp fetch request
 function getYelpPrice() {
@@ -29,13 +35,13 @@ function getDelivery() {
     localStorage.setItem('delivery', yelpDelivery.value);
 }
 
-// fetch for YELP -- need to get search term to update according to the dropdown options
-// also need price point to update according to dropdown option as well -- 1=$ 2=$$ 3=$$$ 4=$$$$
+// fetch for YELP
 
 function getYelpFetch() {
     let foodSearch = localStorage.getItem('food-category');
+    
     let yelpPrice = localStorage.getItem('yelp-price');
-    let deliveryOption = localStorage.getItem('delivery');
+    yelpPrice
 
     fetch("https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=losangeles&term=" + foodSearch + "&price=" + yelpPrice, {
         "method": "GET",
@@ -49,9 +55,6 @@ function getYelpFetch() {
         })
         .then(function (data) {
             console.log(data);
-
-
-
 
             // show list of businesses from array of chosen options
             let restaurantName = document.querySelector('#restaurant-name')
