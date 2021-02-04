@@ -6,15 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- we need to have this relative linked and  -->
     <!-- <link rel="stylesheet" href="/Users/calebportales/mybulma/mystyles.scss"> -->
     <title>Food For You</title>
 </head>
 
 <body>
-    
-    <!-- to get the icon on the left i had to place the <img> tags inside the first <p> element -->
-    <!-- there might be a better way -->
     <!-- navbar start -->
     <nav id="nav" class="hero is-info">
         <div class="row">
@@ -51,46 +47,40 @@
             <div class="row">
                 <img class="top-header" src="./assets/images/checker.jpg">
             </div>
-          </div>
-    </div>
+        </div>
+        </div>
         <div class="hero-body">
             <p class="title">Food For You
                 <img class="navbar-icon" src="./assets/images/navbar-icon.png"
                     alt="little symbol of a plate with forks">
             </p>
-            
+
             <brk></brk>
-        
-            <p class="subtitle">When you just can't decide! &#x1F354 &#127839</p>
+
+            <p class="subtitle">Let us take care of the hard part. &#x1F354 &#127839</p>
         </div>
         </div>
     </nav>
     <!-- navbar end -->
 
-           <!-- modal -->
-           <div id="error-modal" class="modal">
-            <div id="modal-background" class="modal-background">
-                <div class="modal-content has-background-white py-5 px-5">
-                    <p class="title mb-6">Sorry there were no results for this food choice.</p>
-                </div>
+    <!-- modal -->
+    <div id="error-modal" class="modal">
+        <div id="modal-background" class="modal-background">
+            <div class="modal-content has-background-white py-5 px-5">
+                <p class="title mb-6">Sorry there were no results for this food choice.</p>
             </div>
         </div>
-        <!-- modal end -->
+    </div>
+    <!-- modal end -->
 
     <!-- drop down options start -->
     <main>
         <section class="container">
-            <!-- search terms of food type/price/delivery/movie genre  point for fetch -->
-            <!-- from screen size 885 to about 760 the options go off the screen. i tried bulma's "is-mobile" -->
-            <!-- but that causes the drop down options to never stack on top of each other -->
-            <!-- also i could not get the options to align at the bottom of the drop down bars -->
-            <!-- so it aligns at the top of the text for now -->
-
             <!-- what category for food // use this selection for the search term -->
             <div id="dropDownOptions" class="columns is-centered">
                 <div class="column">
                     <section class="dropdownCard">
-                        <h2 class="title is-size-4">What Kind Of Food</h2>
+                        <h2 class="title is-size-4">What kind of food?</h2>
                         <div class="select">
                             <select id="food-category">
                                 <option selected disabled>Select dropdown</option>
@@ -112,17 +102,17 @@
                     </section>
                 </div>
 
-                <!-- what price point // use this for the search price -->
+                <!-- Price Points -->
                 <div class="column">
                     <section class="dropdownCard">
-                        <h2 class="title is-size-4">How Much Money</h2>
+                        <h2 class="title is-size-4">What's your budget (per person)?</h2>
                         <div class="select">
                             <select id="yelp-price">
                                 <option selected disabled>Select dropdown</option>
-                                <option value="1">$</option>
-                                <option value="2">$$</option>
-                                <option value="3">$$$</option>
-                                <option value="4">$$$$</option>
+                                <option value="1">$ ($1-10)</option>
+                                <option value="2">$$ ($11-20)</option>
+                                <option value="3">$$$ ($21-30)</option>
+                                <option value="4">$$$$ ($31+)</option>
                             </select>
                         </div>
                     </section>
@@ -131,7 +121,7 @@
                 <!-- ~ Movie Drop Down ~-->
                 <div class="column">
                     <section class="dropdownCard">
-                        <h2 class="title is-size-4">What Movie Genre</h2>
+                        <h2 class="title is-size-4">What kind of movie?</h2>
                         <div class="select">
                             <select class="movie-genre-dropdown">
                                 <option disabled selected>Select Genre</option>
@@ -166,81 +156,110 @@
     <!-- drop down options end -->
 
     <!-- ~ Query Results Start ~ -->
-    <!-- ~ Putting restaurant results in section with results ~ -->
     <section id="overall-results">
-
-        <!-- ~ Pulled class and put into overall section, removed is-centered ~-->
         <!-- restaurant results start -->
-        <div class="column">
-       
-        </div>
-        <!-- restaurant results end -->
-
-        <!-- ~ Movie Results Start ~ -->
-        <div class="column">
-            <section id="movie-results" class="section hide">
-                <div>
-                    <h4 id="movie-name" class="strong"></h4>
-                    <h4 id="movie-rating">Average User Rating: </h4>
-                    <div class="has-text-centered">
-                        <button id="movie-website" class="button is-rounded is-focused is-centered">
-                            <a id="movie-link" href="">TMDB Page &</b> Where to watch it</b></a>
-                        </button>
-                    </div>
-                    <img id="poster-image" class="column is-narrow" src="" alt="Movie Poster" height="225px"
-                        width="225px">
-                </div>
-
-            </section>
             <!-- restaurant results start -->
-            <section id="restaurant-results" class="section hide is-centered">
-                <div>
-                    <h4 id="restaurant-name" class="strong"></h4>
-                    <h4 id="yelp-rating" class="is-size-5"></h4>
-                    <div class="has-text-centered">
-                        <button id="restaurant-website" class="button is-rounded is-focused is-centered">
-                            <a id="yelp-link" href="">Check them out on Yelp!</a>
-                        </button>
+            <div class="column">
+                <section id="restaurant-results" class="section is-hidden-touch is-hidden-desktop">
+                    <div>
+                        <h4 id="restaurant-name" class="strong"></h4>
+                        <h4 id="yelp-rating" class="is-size-5"></h4>
+                        <div class="has-text-centered">
+                            <button id="restaurant-website" class="button is-rounded is-focused is-centered">
+                                <a id="yelp-link" target="_blank" href="">Check them out on Yelp!</a>
+                            </button>
+                        </div>
+                        <img id="restaurant-image" class="column is-narrow" src=""
+                            alt="picture from yelp about the restaurant" height="300px" width="350px">
                     </div>
-                    <img id="restaurant-image" class="column is-narrow" src=""
-                        alt="picture from yelp about the restaurant" height="300px" width="350px">
-                </div>
-            </section>
-            <!-- ~ Movie Results End ~ -->
-            <!-- ~ Query Results End~ -->
+                </section>
+                <!-- restaurant results end -->
 
-
-
-            <!-- new footer -->
-            <section id="" class="section hide">
-                <div>
-                    <h4 id="restaurant-name" class="strong"></h4>
-                    <h4 id="yelp-rating"></h4>
-                    <div class="has-text-centered">
-                        <button id="restaurant-website" class="button is-rounded is-focused is-centered">
-                            <a id="yelp-link" href="">Check them out on Yelp!</a>
-                        </button>
+                <!-- ~ Movie Results Start ~ -->
+                <section id="movie-results" class="section is-hidden-touch is-hidden-desktop">
+                    <div>
+                        <h4 id="movie-name" class="strong"></h4>
+                        <div class="has-text-centered">
+                            <button id="movie-website" class="button is-rounded is-focused is-centered">
+                                <a id="movie-link" target="_blank" href="">TMDB Page &</b> Where to watch it</b></a>
+                            </button>
+                        </div>
+                        <img id="poster-image" class="column is-narrow" src="" alt="Movie Poster" height="225px"
+                            width="225px">
                     </div>
-                    <img id="restaurant-image" class="column is-narrow" src=""
-                        alt="picture from yelp about the restaurant" height="225px" width="225px">
-                </div>
-            </section>
-            <!-- footer (what's near you) start -->
-            <!-- <footer class="section">
-                <h3 class="title">What's near you?</h3>
-                <div class="columns is-centered is-mobile">
-                    <a id="first-near-you" href="">
-                        <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-                    </a>
-                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-                    <img class="column is-narrow" src="https://via.placeholder.com/150" alt="">
-                </div>
-            </footer> -->
-            <!-- footer (what's near you) end -->
 
-            <!-- script tag for javascript -->
-            <script src="./assets/javascript/script.js"></script>
+                </section>
+            </div>
+    </section>
+    <!-- ~ Movie Results End ~ -->
+    <!-- ~ Query Results End~ -->
+
+    <!-- ~Local Storage~ -->`
+    <section class="suggestions">
+        <h4 class="section-title work-title is-hidden-touch is-hidden-desktop" id="robert">Having second thoughts?
+            Here's some of your previous suggestions.</h4>
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <div id="box1" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
+                        <div class="card-image">
+                            <div class="image img-history">
+                                <a id="url1" href="">
+                                    <img id="img1" src="" alt="Placeholder image" class="center">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4" id="history1">Restaurant 1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box2" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
+                        <div class="card-image">
+                            <div class="image img-history">
+                                <a id="url2" href="">
+                                    <img id="img2" src="" alt="Placeholder image" class="center">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4" id="history2">Restaurant 2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box3" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
+                        <div class="card-image">
+                            <div class="image img-history">
+                                <a id="url3" href="">
+                                    <img id="img3" src="" alt="Placeholder image" class="center">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4" id="history3">Restaurant 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ~Local Storage End~ -->
+
+    <script src="./assets/javascript/script.js"></script>
 </body>
 
 </html>
