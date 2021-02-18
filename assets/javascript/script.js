@@ -38,6 +38,7 @@ function getYelpFetch() {
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Bearer tp-_IN_VqcobWBBzZvhnTyIYpZGEqkrSqFgFtBWa3FXwPeEpob_Li3qRhwCnZkpZnX7VtDSzaF_Z2Yx_se7tGqXjG0DfxDMagHHK-XuFx-lDXfbEytQnPtJZQ1YaYHYx"
+            //"Authorization": "Bearer IRtkp9Z-vSrWfSJK_sb1z4enasEAraGZfotbuAK5Nc-JFs3NEhvjAmRzW2jfe6i6TrQfezNgJJzFZ0ZyN2X99ftzI-9MBhj8EV4ctw4rBfMmgwajcTuV-CW2J0ESYHYx"
         }
     })
         .then(function (response) {
@@ -101,7 +102,7 @@ function getYelpFetch() {
     }
 };
 
-// Loads local storage history 
+// Loads localstorage history 
 let loadHistory = function () {
     let counter = localStorage.getItem("counter")
     if (counter > 3) {
