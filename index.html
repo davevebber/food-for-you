@@ -158,38 +158,38 @@
     <!-- ~ Query Results Start ~ -->
     <section id="overall-results">
         <!-- restaurant results start -->
-        <!-- restaurant results start -->
-        <div class="column">
-            <section id="restaurant-results" class="section is-hidden-touch is-hidden-desktop">
-                <div>
-                    <h4 id="restaurant-name" class="strong"></h4>
-                    <h4 id="yelp-rating" class="is-size-5"></h4>
-                    <div class="has-text-centered">
-                        <button id="restaurant-website" class="button is-rounded is-focused is-centered">
-                            <a id="yelp-link" target="_blank" href="">Check them out on Yelp!</a>
-                        </button>
+            <!-- restaurant results start -->
+            <div class="column">
+                <section id="restaurant-results" class="section is-hidden-touch is-hidden-desktop">
+                    <div>
+                        <h4 id="restaurant-name" class="strong"></h4>
+                        <h4 id="yelp-rating" class="is-size-5"></h4>
+                        <div class="has-text-centered">
+                            <button id="restaurant-website" class="button is-rounded is-focused is-centered">
+                                <a id="yelp-link" target="_blank" href="">Check them out on Yelp!</a>
+                            </button>
+                        </div>
+                        <img id="restaurant-image" class="column is-narrow" src=""
+                            alt="picture from yelp about the restaurant" height="300px" width="350px">
                     </div>
-                    <img id="restaurant-image" class="column is-narrow" src=""
-                        alt="picture from yelp about the restaurant" height="300px" width="350px">
-                </div>
-            </section>
-            <!-- restaurant results end -->
+                </section>
+                <!-- restaurant results end -->
 
-            <!-- ~ Movie Results Start ~ -->
-            <section id="movie-results" class="section is-hidden-touch is-hidden-desktop">
-                <div>
-                    <h4 id="movie-name" class="strong"></h4>
-                    <div class="has-text-centered">
-                        <button id="movie-website" class="button is-rounded is-focused is-centered">
-                            <a id="movie-link" target="_blank" href="">TMDB Page &</b> Where to watch it</b></a>
-                        </button>
+                <!-- ~ Movie Results Start ~ -->
+                <section id="movie-results" class="section is-hidden-touch is-hidden-desktop">
+                    <div>
+                        <h4 id="movie-name" class="strong"></h4>
+                        <div class="has-text-centered">
+                            <button id="movie-website" class="button is-rounded is-focused is-centered">
+                                <a id="movie-link" target="_blank" href="">TMDB Page &</b> Where to watch it</b></a>
+                            </button>
+                        </div>
+                        <img id="poster-image" class="column is-narrow" src="" alt="Movie Poster" height="225px"
+                            width="225px">
                     </div>
-                    <img id="poster-image" class="column is-narrow" src="" alt="Movie Poster" height="225px"
-                        width="225px">
-                </div>
 
-            </section>
-        </div>
+                </section>
+            </div>
     </section>
     <!-- ~ Movie Results End ~ -->
     <!-- ~ Query Results End~ -->
@@ -198,10 +198,10 @@
     <section class="suggestions">
         <h4 class="section-title work-title is-hidden-touch is-hidden-desktop" id="robert">Having second thoughts?
             Here's some of your previous suggestions.</h4>
-
-            <div class="columns">
-                <div class="column">
-                    <div class="card search-history">
+        <div class="grid-wrapper">
+            <div class="grid-container">
+                <div id="box1" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
                         <div class="card-image">
                             <div class="image img-history">
                                 <a id="url1" href="">
@@ -218,8 +218,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card search-history">
+                <div id="box2" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
                         <div class="card-image">
                             <div class="image img-history">
                                 <a id="url2" href="">
@@ -236,8 +236,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
-                    <div class="card search-history">
+                <div id="box3" class="grid-item fill is-hidden-touch is-hidden-desktop">
+                    <div class="card column search-history">
                         <div class="card-image">
                             <div class="image img-history">
                                 <a id="url3" href="">
@@ -254,8 +254,8 @@
                         </div>
                     </div>
                 </div>
-              </div>
-        
+            </div>
+        </div>
     </section>
     <!-- ~Local Storage End~ -->
 
